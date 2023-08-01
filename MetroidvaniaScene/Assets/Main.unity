@@ -610,7 +610,6 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
-<<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
   walkSpeed: 15
 =======
   walkSpeed: 20
@@ -619,10 +618,6 @@ MonoBehaviour:
   walkSpeed: 20
 >>>>>>> parent of f953b40 (ordnerstruktur)
   jumpForce: 45
-=======
-  walkSpeed: 20
-  jumpForce: 30
->>>>>>> parent of 5dd6b79 (fixing of the code, jumping gefixed):MetroidvaniaScene/Assets/Main.unity
 =======
   walkSpeed: 20
   jumpForce: 30
