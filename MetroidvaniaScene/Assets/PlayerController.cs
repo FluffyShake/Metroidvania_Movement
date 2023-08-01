@@ -16,6 +16,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckX = 0.5f;
     [SerializeField] private LayerMask whatIsGround;
 
+
+    public static PlayerController Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +50,14 @@ public class PlayerController : MonoBehaviour
     {
         xAxis = Input.GetAxisRaw("Horizontal");
     }
-    
+
     void Flip()
     {
-        if(xAxis < 0)
+        if (xAxis < 0)
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
         }
-        else if(xAxis > 0)
+        else if (xAxis > 0)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
         }
