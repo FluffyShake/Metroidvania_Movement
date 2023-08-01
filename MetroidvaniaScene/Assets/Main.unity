@@ -608,12 +608,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
   walkSpeed: 15
 =======
   walkSpeed: 20
 >>>>>>> parent of f953b40 (ordnerstruktur):MetroidvaniaScene/Assets/Main.unity
+=======
+  walkSpeed: 20
+>>>>>>> parent of f953b40 (ordnerstruktur)
 =======
   walkSpeed: 20
 >>>>>>> parent of f953b40 (ordnerstruktur)
