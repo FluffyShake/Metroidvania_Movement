@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
 
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scripts/PlayerController.cs
+<<<<<<< HEAD:MetroidvaniaScene/Assets/Scripts/PlayerController.cs
     private Rigidbody2D rb;
     private float xAxis;
 
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> parent of 5dd6b79 (fixing of the code, jumping gefixed):MetroidvaniaScene/Assets/PlayerController.cs
 =======
 >>>>>>> parent of 5dd6b79 (fixing of the code, jumping gefixed):MetroidvaniaScene/Assets/PlayerController.cs
     // Start is called before the first frame update

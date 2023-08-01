@@ -608,8 +608,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
+<<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
   walkSpeed: 15
   jumpForce: 45
+=======
+  walkSpeed: 20
+  jumpForce: 30
+>>>>>>> parent of 5dd6b79 (fixing of the code, jumping gefixed):MetroidvaniaScene/Assets/Main.unity
 =======
   walkSpeed: 20
   jumpForce: 30
