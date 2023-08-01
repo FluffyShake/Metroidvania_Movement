@@ -607,6 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5d2f9fe43b3e74f98109a6451f6450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
 <<<<<<< HEAD:MetroidvaniaScene/Assets/Scenes/Main.unity
@@ -614,6 +615,9 @@ MonoBehaviour:
 =======
   walkSpeed: 20
 >>>>>>> parent of f953b40 (ordnerstruktur):MetroidvaniaScene/Assets/Main.unity
+=======
+  walkSpeed: 20
+>>>>>>> parent of f953b40 (ordnerstruktur)
   jumpForce: 45
 =======
   walkSpeed: 20
