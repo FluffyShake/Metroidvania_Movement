@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5d2f9fe43b3e74f98109a6451f6450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 20
+  walkSpeed: 15
   jumpForce: 45
   groundCheckPoint: {fileID: 680067305}
   groundCheckY: 0.2
