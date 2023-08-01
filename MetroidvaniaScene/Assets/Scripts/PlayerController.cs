@@ -5,17 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Horizontal Movement Settings")]
-    private Rigidbody2D rb;
     [SerializeField] private float walkSpeed = 1;
-    private float xAxis;
+
+    [SerializeField] private float jumpForce = 45;
+    private int jumpBufferCounter = 0;
+    [SerializeField] private int jumpBufferFrames;
 
     [Header("Ground Check Settings")]
-    [SerializeField] private float jumpForce = 45;
     [SerializeField] private Transform groundCheckPoint;
     [SerializeField] private float groundCheckY = 0.2f;
     [SerializeField] private float groundCheckX = 0.5f;
     [SerializeField] private LayerMask whatIsGround;
 
+<<<<<<< HEAD:MetroidvaniaScene/Assets/Scripts/PlayerController.cs
+    private Rigidbody2D rb;
+    private float xAxis;
+
+    PlayerStateList pState;
 
     public static PlayerController Instance;
 
@@ -31,9 +37,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> parent of 5dd6b79 (fixing of the code, jumping gefixed):MetroidvaniaScene/Assets/PlayerController.cs
     // Start is called before the first frame update
     void Start()
     {
+        pState = GetComponent<PlayerStateList>();
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -41,23 +51,25 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetInputs();
+        UpdateJumpVariables();
+        Flip();
         Move();
         Jump();
-        Flip();
+
     }
 
     void GetInputs()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
     }
-
+    
     void Flip()
     {
-        if (xAxis < 0)
+        if(xAxis < 0)
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
         }
-        else if (xAxis > 0)
+        else if(xAxis > 0)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
         }
@@ -85,15 +97,30 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        //if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
-        //{
-        //    rb.velocity = new Vector2(rb.velocity.x, 0);
-        //}
-
-        if (Input.GetButtonDown("Jump") && Grounded())
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+
+            pState.jumping = false;
         }
+
+        if (!pState.jumping)
+        {
+            if (Input.GetButtonDown("Jump") && Grounded())
+            {
+                rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+
+                pState.jumping = true;
+            }
+        }
+
     }
 
+    void UpdateJumpVariables()
+    {
+        if (Grounded())
+        {
+            pState.jumping = false;
+        }
+    }
 }
